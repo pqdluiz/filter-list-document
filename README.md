@@ -178,7 +178,8 @@ export class FindAllUsersController {
 #### 5 - INSOMNIA
 
 Nessa parte, basicamente quando eu for criar um usuário e depois for fazer uma busca geral, vamos ver que ele irá retornar da maneira que planejamos conforme foram feitos todos os passos até aqui. Aqui vamos ter um exemplo de como ele será retornado no Insomnia:
-<img src="./tmp/insomnia-get.jpeg" alt="foto do resultado da busca" />
+
+<img align="left" src="./tmp/insomnia-get.jpeg" alt="foto do resultado da busca" />
 
 #### Considerações finais
 
