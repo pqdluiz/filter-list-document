@@ -1,12 +1,8 @@
 [
   {
-    "name": "default",
-    "type": "postgres",
-    "port": 5432,
-    "host": "localhost",
-    "username": "root",
-    "password": "passw",
-    "database": "lotobr_test",
+    "type": "sqlite",
+    "database": "example.db",
+    "synchronize": true,
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": ["./src/modules/**/entities/**.ts"],
     "cli": {
