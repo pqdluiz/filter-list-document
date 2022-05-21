@@ -1,5 +1,5 @@
-import { IUsersRepository } from "modules/users/repositories/IUsersRepository";
-import FilterBuilder, { IFilterQuery } from "shared/helpers/filter/typeorm/FilterBuilder";
+import { IUsersRepository } from "../../../repositories/IUsersRepository";
+import FilterBuilder, { IFilterQuery } from "../../../../../shared/helpers/filter/typeorm/FilterBuilder";
 import { Users } from "../entities/users";
 
 import { getRepository, Repository } from "typeorm";

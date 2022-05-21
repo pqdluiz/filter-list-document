@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-import { classToclass } from "class-validator";
+import { classToClass } from "class-transformer";
 
 import { CreateUserUseCase } from "./createUsersUsecase";
 
@@ -16,6 +16,6 @@ export class CreateUsersController {
 
     return response
       .status(201)
-      .json({ success: true, user: classToclass(user) });
+      .json({ success: true, user: classToClass(user) });
   }
 }

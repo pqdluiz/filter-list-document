@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-import { classToclass } from "class-validator";
+import { classToClass } from "class-transformer";
 
 import { FindAllUsersUseCase } from "./findAllUsersUsecase";
-import { parseQueryFilters } from "shared/helpers/filter/parsers/parseQueryFilters";
+import { parseQueryFilters } from "../../../../shared/helpers/filter/parsers/parseQueryFilters";
 
 export class FindAllUsersController {
   async handle(request: Request, response: Response): Promise<Response> {
@@ -14,6 +14,6 @@ export class FindAllUsersController {
 
     return response
       .status(201)
-      .json({ success: true, user: classToclass(user) });
+      .json({ success: true, user: classToClass(user) });
   }
 }

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { CreateUsersController, FindAllUsersController } from "modules/users/usecases";
+import { CreateUsersController, FindAllUsersController } from "../../../usecases";
 
 const usersRouter = Router();
 const findAllUserRouter = new FindAllUsersController();
