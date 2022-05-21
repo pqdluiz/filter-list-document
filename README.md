@@ -2,11 +2,24 @@
 
 **O nosso guia básico de como utilizar o filtro de busca em uma aplicação feita em NodeJS + Typescript + Typeorm**
 
-### START APPLICATION
+### INSTALANDO APLICAÇÃO
+```bash
+$ yarn install
+# or
+$ npm install
+```
+
+### STARTANDO APLICAÇÃO
 ```bash
 $ yarn dev
 # or
 $ npm dev
+```
+
+### ENDPOINTS
+```bash
+GET - http://localhost:5000/users
+POST - http://localhost:5000/users
 ```
 
 Vamos mostrar aqui um exemplo para qual o desenvolvedor já entende o fluxo da aplicação, já entende como funcionam as ferramentas usadas para esse exemplo de API, será mostrado um overview de como é implementado o filtro em uma busca de usuários.
@@ -19,7 +32,7 @@ Vamos nessa!
 #### 1 - HELPERS
 Aqui inicialmente vamos mostrar como é a estrutura que nos possibilita fazer o filtro. Nesse caso, sendo mais resumido vamos pegar apenas o método de build criado nessa classe, veja como ficou:
 ```bash
-# src/helpers/typeorm/index.ts
+# src/helpers/filter/typeorm/filterBuilder/index.ts
 export interface IFilterQuery extends IFilter, IPage, IOrder {}
 
 export default class FilterBuilder<Entity> {
@@ -136,7 +149,7 @@ export class FindAllUsersController {
 
     return response
       .status(201)
-      .json({ success: true, user: classToclass(user) });
+      .json({ success: true, user: classToClass(user) });
   }
 }
 ```
